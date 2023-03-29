@@ -49,7 +49,7 @@ main {max-width: 400px; min-height: 50vh;}
 
 .faq-question {width: 95%; font-family: 'Kumbh Sans', sans-serif; color: var(--darkgrayblue); background-color: rgba(255,255,255,0); border: none; font-size: 14px; font-weight: 400; cursor: pointer; text-align: center;}
 
-.faq-question:hover {color: var(--vdarkgrayblue); font-weight: 700;}
+.faq-question::hover {color: var(--vdarkgrayblue); font-weight: 700;}
 
 .faq-question:after {
 	  content: url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/icon-arrow-down.svg); 
