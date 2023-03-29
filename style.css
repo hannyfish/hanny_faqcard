@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Open+Sans&display=swap');
+
+:root {/*Text*/
+
+--vdarkdesatblue: hsl(238, 29%, 16%);
+--softred: hsl(14, 88%, 65%);
+/*Background Gradient*/
+
+--softviolet: hsl(273, 75%, 66%);
+--softblue: hsl(240, 73%, 65%);
+
+/* Neutral
+
+Text*/
+
+--vdarkgrayblue: hsl(237, 12%, 33%);
+--darkgrayblue: hsl(240, 6%, 50%);
+
+/*Dividers*/
+--ligrayblue: hsl(240, 5%, 91%);}
+
+
+body { display: grid;
+    place-items: center;
+    min-height: 100vh;
+background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+/*Mobile*/
+main {max-width: 400px; min-height: 50vh;}
+
+.faq-container {width: 90%; min-height: 20rem; background: white; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-items: space-evenly;}
+
+.faq-image { min-width: 100%; min-height: 10rem; background: url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/illustration-woman-online-mobile.svg) center no-repeat, url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/bg-pattern-mobile.svg) center no-repeat; background-size: contain; overflow: visible;}
+
+.faq-content {width: 98%; height: auto; padding: 10px; text-align: center;}
+
+.faq-content h2 {font-family: 'Kumbh Sans', sans-serif; font-weight: 700; color: var(--vdarkdesatblue);}
+
+.faq-content section {width: 90%; border-bottom: 1px solid var(--ligrayblue); margin: 7px;}
+
+.faq-question {width: 95%; font-family: 'Kumbh Sans', sans-serif; color: var(--darkgrayblue); background-color: rgba(255,255,255,0); border: none; font-size: 14px; font-weight: 400; cursor: pointer; text-align: center;}
+
+.faq-question:after {
+	  content: url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/icon-arrow-down.svg); 
+	  float: right;
+	  margin-left: 5px;
+	  margin-right: 3px;
+	  margin-top:3px;
+	}
+	
+.active:after {
+  content: url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/icon-arrow-down.svg); 
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);}
+
+.faq-answer {font-family: 'Kumbh Sans', sans-serif; font-size: 12px; font-weight: 400; width: 90%; padding-left: 20px; margin-bottom: 10px;color: var(--darkgrayblue);
+	  overflow: hidden;
+	  transition: max-height 0.5s ease-out;
+max-height: 0;}
+
+/*Desktop Styles*/
+@media screen and (min-width: 900px)
+{
+  main {min-width: 900px;
+  min-height: 50vh; display: grid;}
+  
+  .faq-container {width: 90%; height: auto; border-radius: 20px; display: grid; grid-template-columns: 50% 45%; grid-template-rows: 100%; gap: 0% 5%; align-items: center;}
+  
+  .faq-image {max-width: 100%; min-height: 100%; background: url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/illustration-box-desktop.svg) -30% center no-repeat, url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/bg-pattern-desktop.svg) center no-repeat, url(https://raw.githubusercontent.com/hannyfish/hanny_faqcard/87f4dcf590d08ac8cde5e345feca0648e068c11c/illustration-woman-online-desktop.svg) center no-repeat; }
+  
+  .faq-content {text-align: justify;}
+  .faq-question {text-align: justify;}
+}
